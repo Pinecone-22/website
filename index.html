@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pinecone — personal project archive." />
+    <title>Pinecone // project archive</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-booting">
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <section class="bios" id="bios" aria-label="System startup">
+      <div class="bios__header">PINECONE BIOS VERSION 1.0.0</div>
+      <div class="bios__log" id="boot-log" aria-live="polite"></div>
+      <div class="bios__footer">
+        <span id="boot-progress">0%</span>
+        <button id="skip-boot" type="button">PRESS ANY KEY TO SKIP</button>
+      </div>
+    </section>
+
+    <div class="site" id="site" aria-hidden="true">
+      <header class="status-bar">
+        <a href="#top" class="brand">PINECONE@ARCHIVE:~$</a>
+        <nav aria-label="Primary navigation">
+          <a href="#projects">/PROJECTS</a>
+          <a href="#about">/ABOUT</a>
+          <a href="#contact">/CONTACT</a>
+        </nav>
+        <span class="clock" id="clock"></span>
+      </header>
+
+      <main id="top">
+        <section class="hero terminal-block">
+          <p><span class="prompt">PINECONE@ARCHIVE:~$</span> <span class="typed" id="hero-command">whoami</span></p>
+          <div class="hero__response reveal">
+            <h1>PINECONE</h1>
+            <p class="hero__line">PERSONAL PROJECT ARCHIVE</p>
+          </div>
+          <a class="next-command" href="#projects"><span class="prompt">PINECONE@ARCHIVE:~$</span> ls ./projects <b>↳</b></a>
+        </section>
+
+        <section class="projects terminal-block" id="projects" aria-labelledby="projects-title">
+          <div class="command-heading">
+            <p><span class="prompt">PINECONE@ARCHIVE:~$</span> <span class="typed">ls ./projects --all</span></p>
+            <p class="muted">4 ENTRIES FOUND</p>
+          </div>
+          <h2 id="projects-title">PROJECTS</h2>
+
+          <div class="project-list">
+            <article class="project project--media audio-project reveal" data-playlist="wiimart" data-track-index="0">
+              <div class="project__number">[01]</div>
+              <div class="project__body">
+                <div class="project__title-row">
+                  <h3>WiiMart Hoster</h3>
+                  <a class="project__link" href="https://wiimart.org" target="_blank" rel="noreferrer">OPEN ↗</a>
+                </div>
+                <p>WiiMart aims to bring back the Wii Shop Channel and DSi Shop Channel.</p>
+                <p class="tag">STATUS: ACTIVE / WIIMART.ORG</p>
+              </div>
+              <div class="project__media-stack">
+                <button class="project__media project__media--wiimart" type="button" aria-pressed="false" aria-label="Play the WiiMart Shop Channel theme">
+                  <img src="assets/media/wiimart-bag.png" alt="Blue WiiMart shopping bag logo" />
+                  <span class="project__media-label">HOVER OR CLICK: SHOP CHANNEL THEME</span>
+                </button>
+                <div class="media-controls">
+                  <span class="track-name">SHOP CHANNEL THEME</span>
+                  <button class="keep-playing" type="button" aria-pressed="false">KEEP PLAYING</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <div class="project__number">[02]</div>
+              <div class="project__body">
+                <div class="project__title-row">
+                  <h3>revTendo <span class="dim">(RIP)</span></h3>
+                </div>
+                <p>My 3DS and Wii U revival project. It ended recently because of internal issues.</p>
+                <p class="tag dim">STATUS:REST IN PEACE</p>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <div class="project__number">[03]</div>
+              <div class="project__body">
+                <div class="project__title-row">
+                  <h3>ren'3dsPY</h3>
+                </div>
+                <p>A work-in-progress port of Ren'Py for the Nintendo 3DS.</p>
+                <p class="tag">STATUS: WIP</p>
+              </div>
+            </article>
+
+            <article class="project project--media audio-project reveal" data-playlist="ddlc" data-track-index="8">
+              <div class="project__number">[04]</div>
+              <div class="project__body">
+                <div class="project__title-row">
+                  <h3>DDLC3DS-Native</h3>
+                </div>
+                <p>A work-in-progress native port of DDLC for the Nintendo 3DS, with mod support.</p>
+                <p class="tag">STATUS: WIP</p>
+              </div>
+              <div class="project__media-stack">
+                <button class="project__media project__media--ddlc" type="button" aria-pressed="false" aria-label="Play My Confession">
+                  <img src="assets/media/ddlc3ds-cover.png" alt="Doki Doki Literature Club Plus Nintendo 3DS cover" />
+                  <span class="project__media-label">HOVER OR CLICK: MY CONFESSION</span>
+                </button>
+                <div class="media-controls">
+                  <span class="track-name">MY CONFESSION</span>
+                  <button class="track-switch" type="button" aria-label="Switch DDLC music">→</button>
+                  <button class="keep-playing" type="button" aria-pressed="false">KEEP PLAYING</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="about terminal-block" id="about" aria-labelledby="about-title">
+          <p><span class="prompt">PINECONE@ARCHIVE:~$</span> <span class="typed">cat ./about.txt</span></p>
+          <div class="about__response reveal">
+            <h2 id="about-title">ABOUT</h2>
+            <p>I make revival projects, ports, and tools for older Nintendo consoles</p>
+          </div>
+        </section>
+
+        <section class="contact terminal-block" id="contact" aria-labelledby="contact-title">
+          <p><span class="prompt">PINECONE@ARCHIVE:~$</span> <span class="typed">git remote -v</span></p>
+          <div class="contact__response reveal">
+            <h2 id="contact-title">CONTACT</h2>
+            <div class="contact__links">
+              <a class="github-link" href="https://github.com/pinecone-22" target="_blank" rel="noreferrer">GITHUB.COM/PINECONE-22 <span>↗</span></a>
+              <a class="github-link" href="mailto:pinecone@pine-cone.xyz">PINECONE@PINE-CONE.XYZ <span>↗</span></a>
+              <a class="github-link" href="https://discord.com/users/947192542045290586" target="_blank" rel="noreferrer">DISCORD PROFILE <span>↗</span></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="console" aria-label="Interactive terminal">
+          <div class="console__bar"><span>TERMINAL</span><span>● ● ●</span></div>
+          <div class="console__output" id="terminal-output" aria-live="polite">
+            <p>TYPE <button class="inline-command" type="button" data-command="help">HELP</button> FOR AVAILABLE COMMANDS.</p>
+          </div>
+          <form class="console__input" id="command-form">
+            <label for="command-input">PINECONE@ARCHIVE:~$</label>
+            <input id="command-input" autocomplete="off" spellcheck="false" aria-label="Type a terminal command" />
+            <span class="cursor" aria-hidden="true"></span>
+          </form>
+        </section>
+      </main>
+
+      <footer>
+        <span>© <span id="year"></span> PINECONE</span>
+        <a href="https://github.com/pinecone-22" target="_blank" rel="noreferrer">GITHUB</a>
+        <button id="replay-boot" type="button">REBOOT</button>
+      </footer>
+    </div>
+    <audio id="wiimart-audio" preload="metadata" loop>
+      <source src="assets/media/wiimart-shop-theme.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="ddlc-01-audio" preload="metadata" loop><source src="assets/media/ddlc/01-main-theme.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-02-audio" preload="metadata" loop><source src="assets/media/ddlc/02-ohayou-sayori.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-03-audio" preload="metadata" loop><source src="assets/media/ddlc/03-dreams-of-love-and-literature.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-04-audio" preload="metadata" loop><source src="assets/media/ddlc/04-okay-everyone.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-05-audio" preload="metadata" loop><source src="assets/media/ddlc/05-play-with-me.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-06-audio" preload="metadata" loop><source src="assets/media/ddlc/06-poem-panic.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-07-audio" preload="metadata" loop><source src="assets/media/ddlc/07-daijoubu.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-08-audio" preload="metadata" loop><source src="assets/media/ddlc/08-my-feelings.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-09-audio" preload="metadata" loop><source src="assets/media/ddlc/09-my-confession.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-10-audio" preload="metadata" loop><source src="assets/media/ddlc/10-sayo-nara.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-11-audio" preload="metadata" loop><source src="assets/media/ddlc/11-just-monika.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-12-audio" preload="metadata" loop><source src="assets/media/ddlc/12-i-still-love-you.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-13-audio" preload="metadata" loop><source src="assets/media/ddlc/13-your-reality.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-14-audio" preload="metadata" loop><source src="assets/media/ddlc/14-okay-everyone-sayori.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-15-audio" preload="metadata" loop><source src="assets/media/ddlc/15-okay-everyone-natsuki.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-16-audio" preload="metadata" loop><source src="assets/media/ddlc/16-okay-everyone-yuri.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-17-audio" preload="metadata" loop><source src="assets/media/ddlc/17-okay-everyone-monika.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-18-audio" preload="metadata" loop><source src="assets/media/ddlc/18-your-reality-no-vocals.mp3" type="audio/mpeg" /></audio>
+    <audio id="ddlc-select-sfx" preload="metadata">
+      <source src="assets/media/ddlc-select-sfx.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="vhs-audio" preload="metadata" loop>
+      <source src="assets/media/vhs-noise.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>
